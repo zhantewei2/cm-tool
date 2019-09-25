@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "rootDir":"./src",
+    "outDir": "lib",
+    "sourceMap": false,
+    "types": ["node"],
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "allowJs": true,
+    "paths": {
+      "*": [
+        "node_modules/*",
+        "src/*"
+      ],
+      "@/*": ["src/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "lib"
+  ],
+  "include": [
+    "src/**/*",
+    "src/*"
+  ]
+}

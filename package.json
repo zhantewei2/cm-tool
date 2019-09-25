@@ -1,0 +1,33 @@
+{
+  "name": "cm-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "",
+    "compiler": "./node_modules/.bin/tsc --project tsconfig.json",
+    "watch": "./node_modules/.bin/tsc --project tsconfig.json -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "cm": "./lib/bin/index.js",
+    "cmServe": "./lib/bin/serve.js"
+  },
+  "dependencies": {
+    "@ztwx/ztw-server": "0.0.4",
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0",
+    "inquirer": "^6.3.1",
+    "typescript": "^3.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.7",
+    "find-process": "^1.4.2",
+    "module-alias": "^2.2.1",
+    "process": "^0.11.10"
+  },
+  "_moduleAliases": {
+    "@": "lib"
+  }
+}
