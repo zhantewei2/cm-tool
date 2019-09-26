@@ -16,13 +16,13 @@ yarn global add @ztwx/cm-cli
 ---
 
 
- ### [COMMON TOOL]()
+ [COMMON TOOL]()
 
 > 通用工具
 
 
 
- ### [SERVE TOOL](./readme/serve.md)
+ [SERVE TOOL](https://github.com/zhantewei2/cm-tool/blob/master/readme/serve.md)
 
 > 静态服务器工具
 

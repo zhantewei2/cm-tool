@@ -2,7 +2,7 @@
   "name": "@ztwx/cm-cli",
   "version": "0.0.1",
   "description": "cm client tools",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "dev": "",
     "compiler": "./node_modules/.bin/tsc --project tsconfig.json",
@@ -13,6 +13,10 @@
   "bin": {
     "cm": "./lib/bin/index.js",
     "cmServe": "./lib/bin/serve.js"
+  },
+  "repository":{
+    "type":"git",
+    "url":"git+https://github.com/zhantewei2/cm-tool.git"
   },
   "dependencies": {
     "@ztwx/ztw-server": "0.0.4",
