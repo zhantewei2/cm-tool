@@ -1,6 +1,6 @@
 import findProcess from "find-process";
-import {SERVE_PREFIX} from "@/setting";
-import {_error,_content,_label,_active} from "@/tool";
+import {SERVE_PREFIX} from "../../setting";
+import {_error,_content,_label,_active} from "../../tool";
 
 export interface ServiceRef{
     name:string;

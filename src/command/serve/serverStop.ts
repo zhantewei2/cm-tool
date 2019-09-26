@@ -1,6 +1,6 @@
 import findProcess from "find-process";
 import {getServerName} from "./serverDefine";
-import {_active,_label,_content,_error} from "@/tool";
+import {_active,_label,_content,_error} from "../../tool";
 
 export default async(serviceName:string)=>{
     const realServiceName=getServerName(serviceName);

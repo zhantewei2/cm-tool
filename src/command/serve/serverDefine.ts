@@ -1,4 +1,4 @@
-import {SERVE_PREFIX} from "@/setting";
+import {SERVE_PREFIX} from "../../setting";
 import findProcess from "find-process";
 
 

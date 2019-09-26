@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 // const cmder=require("commander");
-require("module-alias/register");
 
 import cmder, { Command } from "commander";
-import {SERVE_VERSION} from "@/setting";
+import {SERVE_VERSION} from "../setting";
 import {strict as assert} from 'assert';
 import createServe from "../command/serve/serveMain";
 import stopServe from "../command/serve/serverStop";
@@ -17,7 +16,7 @@ cmder
     .option('-g,--gzipFile <string>','specify gzip file type;default false; you can set it to"js,css,html" ')
     .option('-p,--port <number>','server port ;default 3000')
     .option('-m,--maxAge <number>','server Cache-control maxAge; default 86400')
-    .action((serviceName:string,{url='/',gzipFile='js,css,html',port=3000,dir,maxAge=86400}:any)=>{
+    .action((serviceName:string,{url='/',gzipFile=false,port=3000,dir,maxAge=86400}:any)=>{
         createServe(serviceName,dir,url,gzipFile,port,maxAge);
     })
 

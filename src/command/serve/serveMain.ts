@@ -1,7 +1,7 @@
 import logging from "../../logging/logging";
 import path from 'path';
 import {spawn} from 'child_process';
-import {_content,_label,port_occupied,_active,_error} from "@/tool";
+import {_content,_label,port_occupied,_active,_error} from "../../tool";
 import {getServerName,serviceIsRunning} from "./serverDefine";
 
 const log=logging("")
@@ -25,7 +25,6 @@ export default async(serviceName:string,dir:string,url:string,gzip:string|boolea
     dir=path.resolve(process.cwd(),dir);
 
     const serverProcessPath:string=path.join(path.dirname(__filename),"serverProcess.js");
-    console.log(gzip)
     const sub=spawn("node",[serverProcessPath,realServiceName,url,dir,port+"",maxAge+"",gzip+""],{detached:true})
     sub.stderr.on("data",(data:Buffer)=>{
         console.log(data.toString())
