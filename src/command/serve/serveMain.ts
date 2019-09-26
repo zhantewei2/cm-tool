@@ -25,9 +25,13 @@ export default async(serviceName:string,dir:string,url:string,gzip:string|boolea
     dir=path.resolve(process.cwd(),dir);
 
     const serverProcessPath:string=path.join(path.dirname(__filename),"serverProcess.js");
+    console.log(gzip)
     const sub=spawn("node",[serverProcessPath,realServiceName,url,dir,port+"",maxAge+"",gzip+""],{detached:true})
     sub.stderr.on("data",(data:Buffer)=>{
         console.log(data.toString())
+    })
+    sub.stdout.on("data",(chunk:Buffer)=>{
+        console.log(chunk.toString());
     })
     console.log(_label("result:"),_active(serviceName),_content(`serve start successfull`));
     console.log(_label("you can access it though by ",_content(`http://localhost:${port}${url}`)))

@@ -1,7 +1,7 @@
 {
-  "name": "cm-cli",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@ztwx/cm-cli",
+  "version": "0.0.1",
+  "description": "cm client tools",
   "main": "index.js",
   "scripts": {
     "dev": "",

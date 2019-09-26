@@ -11,6 +11,7 @@ app.use(
       memory:false,
       etag:true,
       maxAge,
+      gzip:gzipFile,
       callback:'index.html'
     })
 )

@@ -14,11 +14,10 @@ cmder
     .command('start <serviceName>')
     .option('-d,--dir <string>','server static directory')
     .option('-u,--url <string>','server base url; default /')
-    .option('-g,--gzipFile <string>','specify gzip file;default "js,css,html"; set false to present default behaviours ')
+    .option('-g,--gzipFile <string>','specify gzip file type;default false; you can set it to"js,css,html" ')
     .option('-p,--port <number>','server port ;default 3000')
-    .option('-m,--maxAge <number>','server Cache-control maxAge; default ')
+    .option('-m,--maxAge <number>','server Cache-control maxAge; default 86400')
     .action((serviceName:string,{url='/',gzipFile='js,css,html',port=3000,dir,maxAge=86400}:any)=>{
-        console.log(serviceName)
         createServe(serviceName,dir,url,gzipFile,port,maxAge);
     })
 
